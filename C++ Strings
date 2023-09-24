@@ -1,0 +1,119 @@
+C++ Strings
+Strings are used for storing text.
+
+A string variable contains a collection of characters surrounded by double quotes:
+
+Example
+Create a variable of type string and assign it a value:
+
+string greeting = "Hello";
+To use strings, you must include an additional header file in the source code, the <string> library:
+
+Example
+// Include the string library
+#include <string>
+
+// Create a string variable
+string greeting = "Hello";
+
+
+String Concatenation
+The + operator can be used between strings to add them together to make a new string. This is called concatenation:
+
+Example
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName + lastName;
+cout << fullName;
+
+
+
+Append
+A string in C++ is actually an object, which contain functions that can perform certain operations on strings. For example, you can also concatenate strings with the append() function:
+
+Example
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName.append(lastName);
+cout << fullName;
+
+
+String Length
+To get the length of a string, use the length() function:
+
+Example
+string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cout << "The length of the txt string is: " << txt.length();
+
+
+
+
+Access Strings
+You can access the characters in a string by referring to its index number inside square brackets [].
+
+This example prints the first character in myString:
+
+Example
+string myString = "Hello";
+cout << myString[0];
+// Outputs H
+
+
+
+Strings - Special Characters
+Because strings must be written within quotes, C++ will misunderstand this string, and generate an error:
+
+string txt = "We are the so-called "Vikings" from the north.";
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+Escape character	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+The sequence \"  inserts a double quote in a string:
+
+Example
+string txt = "We are the so-called \"Vikings\" from the north.";
+
+
+
+User Input Strings
+It is possible to use the extraction operator >> on cin to store a string entered by a user:
+
+Example
+string firstName;
+cout << "Type your first name: ";
+cin >> firstName; // get user input from the keyboard
+cout << "Your name is: " << firstName;
+
+// Type your first name: John
+// Your name is: John
+However, cin considers a space (whitespace, tabs, etc) as a terminating character, which means that it can only store a single word (even if you type many words):
+
+Example
+string fullName;
+cout << "Type your full name: ";
+cin >> fullName;
+cout << "Your name is: " << fullName;
+
+// Type your full name: John Doe
+// Your name is: John
+
+
+
+
+
+Omitting Namespace
+You might see some C++ programs that runs without the standard namespace library. The using namespace std line can be omitted and replaced with the std keyword, followed by the :: operator for string (and cout) objects:
+
+Example
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string greeting = "Hello";
+  std::cout << greeting;
+  return 0;
+}
