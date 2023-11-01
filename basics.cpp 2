@@ -17,7 +17,8 @@ using namespace std;
 
 int main() {
   cout << "Hello World!";
-  cout << "I am learning C++";
+  cout << "I am learning C++ \n\n";
+  cout << "I am new to open source";
   return 0;
 }
 New Lines
@@ -29,7 +30,8 @@ using namespace std;
 
 int main() {
   cout << "Hello World! \n";
-  cout << "I am learning C++";
+  cout << "I am learning C++ \n\n";
+  cout << "I am new to open source";
   return 0;
 }
 
@@ -42,7 +44,8 @@ using namespace std;
 
 int main() {
   cout << "Hello World! \n\n";
-  cout << "I am learning C++";
+  cout << "I am learning C++ \n\n";
+  cout << "I am new to open source";
   return 0;
 }
 
